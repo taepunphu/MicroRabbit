@@ -1,4 +1,4 @@
-﻿using MiccroRabbit.Infra.Bus;
+﻿using MicroRabbit.Infra.Bus;
 using MicroRabbit.Domain.Core.Bus;
 using Microsoft.Extensions.DependencyInjection;
 using System;

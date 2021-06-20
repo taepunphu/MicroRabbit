@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiccroRabbit.Infra.Bus
+namespace MicroRabbit.Infra.Bus
 {
     public sealed class RabbitMQBus : IEventBus
     {
