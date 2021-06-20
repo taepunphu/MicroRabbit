@@ -57,7 +57,7 @@ namespace MiccroRabbit.Infra.Bus
             var eventName = typeof(T).Name;
             var handlerType = typeof(TH);
 
-            if (!_eventTypes.Contains(typeof(t)))
+            if (!_eventTypes.Contains(typeof(T)))
             {
                 _eventTypes.Add(typeof(T));
             }
@@ -99,7 +99,7 @@ namespace MiccroRabbit.Infra.Bus
         private async Task Consumer_Received(object sender, BasicDeliverEventArgs e)
         {
             var eventName = e.RoutingKey;
-            var message = Encoding.UTF8.GetString(e.Body);
+            var message = Encoding.UTF8.GetString(e.Body.ToArray());
 
             try
             {
